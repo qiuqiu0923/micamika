@@ -1,0 +1,117 @@
+
+@charset "utf-8";
+$r:#dc4f45;
+/*重置样式*/
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img, div,input,figure { margin:0; padding:0; box-sizing: border-box;}
+fieldset, img { border:none; }
+img{vertical-align: middle;}
+em,i,b,strong{ font-style:normal; font-weight:normal; }
+ul, ol { list-style:none; } 
+a {text-decoration:none; color:black;font-size: 12px;}
+
+.header{height: 24px;width: 100%;border-bottom:1px solid#dddddd;
+        .top_logo{
+            height:79px;
+            width:920px;
+            margin: 0 auto;
+            position: relative;
+            .logo{
+                height: 79px;
+                line-height: 79px;
+                margin-left: 40px;
+                float: left;
+                img{
+                    width: 182px;
+                    height: 52px;
+                }
+                
+                }
+                p{
+                    color:#dc4f45;
+                    float: left;
+                    position: absolute;
+                    right:194px;
+                    top:40px;
+            }
+            .cart{
+                float: right;
+                width: 125px;
+                height:20px;
+                /*border:1px solid $r;*/
+                /*background:red;*/
+                margin-top:36px;
+                background:url(../imgs/cart.jpg) no-repeat left center;
+                padding-left:29px;
+                color:$r;
+            }
+        }
+        .main_nav{
+            height: 50px;
+            background:#555555;
+        .main_nav_ul{
+            width: 920px;
+            height:50px;
+            margin: 0 auto;
+            display: flex;
+            justify-content:space-around;line-height: 50px;
+            a{
+                color:#ffffe4;
+            }
+            li{
+                height:50px;
+                width: 160px;
+                text-align: center;
+                
+            }
+        li:hover{
+            background: url("../imgs/nav1.jpg");
+            background-size: 160px 50px;
+        }
+        li:hover a{
+            color:$r;
+        }
+        }
+        }
+}
+.header .header_nav{
+    height:24px;width: 920px;margin: 0 auto;}
+.header .header_nav .loginRegister{
+    /*display: block;*/
+    width:260px;height:24px;
+    /*background: red;*/
+    line-height:24px;
+    font-size: 12px;
+    padding-left: 90px;
+    color:#999999;
+    border:1px solid #eeeeee;
+    border-bottom:none;
+    border-top:none;
+    float: left;
+}
+.header .header_nav .loginRegister span{
+    color:#dc4f45;
+    cursor: pointer;
+}
+.header .header_nav .top_nav{
+    float: right;
+    height:24px;
+
+    li{
+        float: left;
+        padding-left:7px;
+        padding-right: 15px;
+        height:24px;
+        background:url("../imgs/nav2.jpg") no-repeat right center;
+        /*float: left;*/
+        a{
+            color:#999999;
+        }
+    }
+}
+.sidebar{
+    height: 100%;
+    width:26px;
+    background:black;
+    position:fixed;
+    top:0px;right:0px;
+}
