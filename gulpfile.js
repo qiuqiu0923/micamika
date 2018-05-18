@@ -15,7 +15,7 @@ gulp.task("conn", function(){
 
 // 编译 sass 
 gulp.task("sass", function(){
-	gulp.src("micamika/sass/*.scss")
+	gulp.src("src/sass/*.scss")
 		.pipe(sass({outputStyle:"compressed"}))
 		.pipe(gulp.dest("dist/css"))
 		.pipe(connect.reload());
@@ -23,7 +23,7 @@ gulp.task("sass", function(){
 
 // 压缩 html
 gulp.task('html', function() {
-	gulp.src('micamika/**/*.html')
+	gulp.src('src/**/*.html')
 		.pipe(htmlmin({collapseWhitespace: true}))
 		.pipe(gulp.dest('dist'))
 		.pipe(connect.reload());
@@ -31,7 +31,7 @@ gulp.task('html', function() {
 
 // 压缩 JS
 gulp.task("js", function(){
-	gulp.src('micamika/js/*.js')
+	gulp.src('src/js/*.js')
 		.pipe(babel({
 			presets: ['env']
 		}))
@@ -42,19 +42,19 @@ gulp.task("js", function(){
 
 // 复制lib
 gulp.task("copy-lib", function(){
-	gulp.src("micamika/lib/**/*.*")
+	gulp.src("src/lib/**/*.*")
 		.pipe(gulp.dest("dist/lib"));
 });
 
 // 复制imgs
 gulp.task("copy-imgs", function(){
-	gulp.src("micamika/img/**/*.*")
+	gulp.src("src/imgs/**/*.*")
 		.pipe(gulp.dest("dist/imgs"));
 });
 
 // 复制mock
 gulp.task("copy-mock", function(){
-	gulp.src("micamika/mock/**/*.*")
+	gulp.src("src/mock/**/*.*")
 		.pipe(gulp.dest("dist/mock"));
 });
 
@@ -62,9 +62,9 @@ gulp.task("copy", ["copy-lib", "copy-imgs", "copy-mock"]);
 
 // 监视任务
 gulp.task("watch", function(){
-	gulp.watch("micamika/sass/*.scss", ["sass"]);
-	gulp.watch("micamika/**/*.html", ["html"]);
-	gulp.watch("micamika/js/*.js", ["js"])
+	gulp.watch("src/sass/*.scss", ["sass"]);
+	gulp.watch("src/**/*.html", ["html"]);
+	gulp.watch("src/js/*.js", ["js"]);
 });
 
 // 定义默认任务
