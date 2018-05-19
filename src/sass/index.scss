@@ -1,0 +1,16 @@
+.banner{
+  height: 470px;
+  width:100%;
+}
+.main{
+    height:763px;
+    width:100%;
+    background: #e2e5e9;
+    .main_top{
+        height:250px;
+        width:100%;
+        background: url("../imgs/a8.png") no-repeat;
+        background-position: 90px 43px;
+        background-size: 300px 204px;
+    }
+}

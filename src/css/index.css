@@ -1,39 +1,14 @@
-@charset "UTF-8";
-/*閲嶇疆鏍峰紡*/
-html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img, div, input, figure {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+.banner {
+  height: 470px;
+  width: 100%; }
 
-fieldset, img {
-  border: none;
-}
-
-img {
-  vertical-align: middle;
-}
-
-em, i, b, strong {
-  font-style: normal;
-  font-weight: normal;
-}
-
-ul, ol {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-#container {
-  background: red;
-  width: 100px;
-  height: 100px;
-}
-#box {
-  height: 100px;
-  width: 100px;
-  background: red;
-}
+.main {
+  height: 763px;
+  width: 100%;
+  background: #e2e5e9; }
+  .main .main_top {
+    height: 250px;
+    width: 100%;
+    background: url("../imgs/a8.png") no-repeat;
+    background-position: 90px 43px;
+    background-size: 300px 204px; }
