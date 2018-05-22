@@ -6,11 +6,228 @@
     height:763px;
     width:100%;
     background: #e2e5e9;
+    padding-top: 44px;
     .main_top{
-        height:250px;
-        width:100%;
-        background: url("../imgs/a8.png") no-repeat;
-        background-position: 90px 43px;
-        background-size: 300px 204px;
+        height: 208px;
+        width:920px;
+        margin:0 auto;
+        position: relative;
+        .img_bg{
+            height: 208px;
+            width: 280px;
+            position: absolute;
+            left:-80px;
+        }
+        .tuijian{
+            width: 477px;
+            height: 208px;
+            margin-left: 222px;
+            padding-top:43px;
+            text-align: center;
+
+        }
+    }
+   .main_banner{
+    height:432px;
+    width:920px;
+    background:white;
+    margin:0 auto;
+    position: relative;
+    .prevNext{
+        height:40px;
+        width: 40px;
+        top: 0px;
+        bottom: 0px;
+        margin:auto;
+        position:absolute;
+        background:url("../imgs/a1.png") no-repeat;
+        cursor: pointer;
+        border-radius:50%;
+        
+    }
+    .prevNext1{
+        height:40px;
+        width: 40px;
+        top: 0px;
+        bottom: 0px;
+        margin:auto;
+        position:absolute;
+        background:#e2e5e9;
+          z-index: 2;
+    }
+    .left_next2{
+        left:-60px;
+    }
+    .right_next2{
+        right:-60px;
+      
+    }
+    .left_prev{
+         left: -25px;
+         background-position: -10px -311px;
+    }
+    .right_next{
+        right: -25px;
+        background-position: -150px -315px;
+    }
+    dl{
+      height:432px;
+    width:920px;
+    display: flex;
+    justify-content:space-between;
+    dt{
+        height: 432px;
+        width:366px;
+        img{
+          height: 432px;
+        width:366px;  
+        }
+    }  
+    dd{
+        width: 532px;
+        height: 432px;
+        .side_name{
+            float: right;
+            height:114px;
+            width:85px;
+            background:url(../imgs/a1.png) no-repeat right center;
+            /*width:100px;*/
+            background-position:-115px -84px;
+            text-align: center;
+            padding-top:45px;
+            /*background-size:70px 85px;*/
+        }
+    .cake_list{
+        width:500px;
+        height: 282px;
+        /*border:1px  solid ;*/
+        margin-top: 90px;
+        position: absolute;
+    ul{
+        display: flex;
+        li{
+        height:282px;
+        width: 160px;
+        overflow: hidden;
+        /*background:lightblue;*/
+        margin-right: 8px;
+        .cake_imgs{
+          display:block;width:160px; height: 160px;background:yellowgreen;
+            margin-bottom: 13px;
+        }
+        em{
+            margin-left: 16px;
+            color: #dc4f45;
+
+        }
+        p{
+            margin-left:12px;
+            font-size: 12px;
+            line-height: 18px;
+        }
+        .cakde_name{
+            color:#666666;
+        }
+        .cake_buy{
+            color:#999999;
+        }
+        .more_cakes{
+            display: block;
+            margin-left:12px;
+          bottom:-30px;
+          cursor: pointer;
+          position: relative;
+          height:36px;
+          width:36px;
+          color: white;
+          font-size: 12px;
+          line-height: 30px;
+          background: url("../imgs/a9.png") no-repeat center center;
+          border-radius: 50%;
+          text-align: center;
+        }
+        .more_cakes:hover{
+           background: url("../imgs/a10.png") no-repeat center center;
+        }
+    }
+
+    }
+    
+    }
+    }
+    }
+   }
+
+
+
+    .more_cake{
+        height:32px;
+        width:136px;
+        border-radius: 16px;
+        background:#e4857f;
+        text-align: center;
+        line-height: 32px;
+        margin:20px auto;
+        color: white;
+        cursor: pointer;
+    }
+}
+.max_imgs{
+    width: 100%;
+    height:78px;
+    margin-bottom:44px;
+}
+.in_imgs{
+    width:920px;
+    height:292px;
+    margin:0 auto;
+    margin-bottom:6px;
+    img{
+     width:920px;
+    height:292px;   
+    }
+}
+.introduce_imgs{
+    height: 292px;
+    width:920px;
+    margin:0 auto;
+    display: flex;
+    img{
+       height: 292px;
+       width: 230px; 
+    }
+}
+ .more_cake{
+        height:32px;
+        width:136px;
+        border-radius: 16px;
+        background:#e4857f;
+        text-align: center;
+        line-height: 32px;
+        margin:20px auto;
+        color: white;
+        cursor: pointer;
+    }
+.bottom_con{
+    height:170px;
+    border-top: 1px solid #f2f2f2;
+    text-align: center;
+    img{
+        margin-top:25px;
+        margin-bottom:6px;
+    }
+    span{
+        display: block;
+        height: 32px;
+        line-height: 32px;
+    }
+    p{
+        margin:0 auto;
+        background:#3897f0;
+        width: 96px;
+        height: 21px;
+        text-align: center;
+        line-height:21px;
+        cursor: pointer;
     }
 }
