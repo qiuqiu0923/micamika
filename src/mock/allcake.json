@@ -1,0 +1,43 @@
+{
+    "res_code" :"0",
+    "res_error" : "",
+    "res_body" : {
+        "products" : [
+            {
+                "img":"/imgs/mock1.jpg",
+                "prod_name" : "数字蜡烛",
+                "prod_info" : "【此款蜡烛请随其他商品一起拍下，单拍不发货哦~】数字蜡烛，记录你的每一个成长。",
+                "prod_price": "$2.00"
+            },
+            {
+                "img":"/imgs/mock2.jpg",
+                "prod_name" : "贺卡",
+                "prod_info" : "本产品是蛋糕标配，不单独出售，每款蛋糕最多配送一份，单拍及多拍订单无效。",
+                "prod_price": "$2.00"
+            },
+             {
+                "img":"/imgs/mock3.jpg",
+                "prod_name" : "生日蜡烛",
+                "prod_info" : "本产品是蛋糕标配，不单独出售，每款蛋糕最多配送一份，单拍及多拍订单无效。",
+                "prod_price": "$44.00"
+            },{
+                "img":"/imgs/mock4.jpg",
+                "prod_name" : "生日蜡烛",
+                "prod_info" : "一次性餐具（包含餐盘与叉子），此商品不单独出售，需与蛋糕一同配送。",
+                "prod_price": "$66.00"
+            },
+            {
+                "img":"/imgs/mock5.jpg",
+                "prod_name" : "生日蜡烛",
+                "prod_info" : "一次性餐具（包含餐盘与叉子），此商品不单独出售，需与蛋糕一同配送。",
+                "prod_price": "$88.00"
+            },
+            {
+                "img":"/imgs/mock6.jpg",
+                "prod_name" : "小萌哒羊 Little Adorable Sheep",
+                "prod_info" : "一次性餐具（包含餐盘与叉子），此商品不单独出售，需与蛋糕一同配送。",
+                "prod_price": "$42.00"
+            }
+        ]
+    }
+}

@@ -135,6 +135,10 @@ define(["jquery", "cookie"], function($){
 		 		alert("注册失败！")
 		 	} 	
 		 });
+		 
+
+
+
 		/* 加载尾部 */
 		$("footer").load("/html/include/footer.html");
 	});

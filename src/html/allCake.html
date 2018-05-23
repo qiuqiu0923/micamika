@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>allcake</title>
+    <link rel="icon" type="image/x-icon" href="../imgs/logo.ico"/>  
+    <link rel="stylesheet" type="text/css" href="../css/base.css">
+    <link rel="stylesheet" type="text/css" href="../css/allcake.css">
+</head>
+<body>
+    <header></header>
+<div style="height:20px; margin:0 auto; width: 920px;border-top:1px solid #ccc;margin-top:37px;"></div>
+<div class="content">
+    <div class="left_content">
+        <div class="nav_choose">
+<div class="choose">
+    <p>分类:</p>
+    <a href="javaScript:void(0)">臻选蛋糕</a>
+    <a href="javaScript:void(0)">全国发专区</a>
+    <a href="javaScript:void(0)">巧克力蛋糕</a>   
+    <a href="javaScript:void(0)">鲜花蛋糕</a>
+    <a href="javaScript:void(0)">奶油水果蛋糕</a>
+    <a href="javaScript:void(0)">慕斯蛋糕</a>
+    <a href="javaScript:void(0)">拼接蛋糕</a>
+    <a href="javaScript:void(0)">乳酪蛋糕</a>
+    <a href="javaScript:void(0)">冰淇淋蛋糕</a><br>
+    <a href="javaScript:void(0)">卡通蛋糕</a>
+    <a href="javaScript:void(0)">蛋糕伴侣</a>
+    <a href="javaScript:void(0)">VIP购卡</a>
+</div>
+<div class="nav" id="choose_nav">
+    <span class="child_nav first">默认</span> <span class="child_nav">价格</span> <span class="child_nav">销量</span> <span>排序:</span>
+    <select style="width:100px; height:18px; font-size: 12px;">
+        <option>默认</option>
+        <option>价格排序</option>
+        <option>销量排序</option>
+    </select>
+</div>
+</div>
+<!-- 定义一个模板引擎 -->
+<div class="temp" style="height:100%;width: 750px;"></div>
+<script type="text/html" id = "temp">
+    {{each products prod}}
+        <div class="mock_template">
+    <img src="{{prod.img}}" alt="">
+    <div class="prod_info">
+        <p class="prod_name">{{prod.prod_name}}</p>
+    <span class="prod_intro">{{prod.prod_info}}</span>
+    </div>
+
+    <p class="price_title" style="width:50px;">销售价:</p>
+    <i class="price">{{prod.prod_price}}</i>
+    <div class="to_cart" style="height:90px;width:120px;">
+        <i class="del">-</i>
+        <input class="checkd_value" type="text" value="1" name="" style="width:60px;outline: none;">
+        <i class="add">+</i>
+        <button class="add_cart" style="font-size: 12px;margin-top:10px;cursor: pointer; outline: none;">加入购物车</button>
+    </div>
+</div>
+    {{/each}}
+</script>    
+                    
+                        
+
+   <!-- ................... -->
+                </div>
+
+                <div class="right_content"></div>
+            </div>
+    <footer></footer>
+
+    
+    
+    <img src="../imgs/cake_logo.jpg" style="display: none;">
+
+    <script src="../lib/requirejs/require.js" data-main="../js/allcake"></script>
+    <script type="text/javascript">
+
+    </script>
+</body>
+</html>
