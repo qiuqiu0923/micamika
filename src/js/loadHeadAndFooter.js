@@ -11,7 +11,7 @@ define(["jquery", "cookie"], function($){
 			 // 		console.log(data);
 			 // 		var html = "";
 			 // 		data.result.forEach(function(curr){
-			 // 			html += `<div>${curr[0]}</div>`;
+			 // 			html += `<div>${curr[0]}</div>`;0
 			 // 		});
 			 // 		$(".suggest").html(html);
 			 // 	});
@@ -72,34 +72,39 @@ define(["jquery", "cookie"], function($){
 				$("#allScreen").slideUp(300)
 			});
 
-			var screenHeight = $(document).height() + "px",
+			var screenHeight = $(window).height() + "px",
 				screenWidth = $(document).width() + "px";
 			$("#allScreen").css({"height":screenHeight,"width":screenWidth});
 		})
 			
 			// cookie cookie
-			var aa,bb,cc;
+			var username,password,password2 ,user_info;
 		 $(".register_user").on("blur", function(){
-		 		 var username = $(".register_user").val();
+		 		 // var username = $(".register_user").val();
 		 // console.log(username);
-		  $.cookie('user', username, { expires: 7 });  
-		  aa = $.cookie('user');
-		 // console.log(aa);
-		 if(aa.length >= 4){
-		 	$(".register_prompt").html("用户名可用");
-		 	$(".register_prompt").css("color","blue");
-		 }
-		 else{
-		 	$(".register_prompt").html("用户名不可用");
+		  // $.cookie('user', username, { expires: 7 });  
+		  // aa = $.cookie('user');
+		    username = $(".register_user").val(); 
+			if(username.length!=0){ 
+			var reg=/^[a-zA-Z0-9]+$/; 
+			if(reg.test(username) && username.length >= 4){ 
+			$(".register_prompt").html("用户名可用");
+		 	$(".register_prompt").css("color","blue");	
+			}else if(!reg.test(username)){
+			$(".register_prompt").html("对不起，您输入的英文字母类型格式不正确!");
+			} 
+			else {
+				$(".register_prompt").html("用户名不可用");
 		 	$(".register_prompt").css("color","red");
-		 }
+			}
+			} 
 		 });
 		$(".register_pass").on("blur", function(){
-		 	 var password = $(".register_pass").val();
-		 	$.cookie('pass', password, { expires: 7 });  
-		 	 bb = $.cookie("pass")
+		 	password = $(".register_pass").val();
+		 	// $.cookie('pass', password, { expires: 7 });  
+		 	//  bb = $.cookie("pass")
 		 // console.log(bb);
-		 if(bb.length >=6 && bb.length <=16){
+		 if(password.length >=6 && password.length <=16){
 		 	$(".pass_prompt").html("密码格式正确");
 		 	$(".pass_prompt").css("color","blue");
 		 }else{
@@ -109,11 +114,11 @@ define(["jquery", "cookie"], function($){
 		 });
 
 		 $(".register_pass2").on("blur", function(){
-		 	 var password2 = $(".register_pass2").val();
-		 	$.cookie('pass2', password2, { expires: 7 });  
-		 	 cc = $.cookie("pass2")
+		 	password2 = $(".register_pass2").val();
+		 	// $.cookie('pass2', password2, { expires: 7 });  
+		 	//  cc = $.cookie("pass2")
 		 // console.log(cc);
-		 if( cc == bb && bb != null){
+		 if( password2 === password && password != null){
 		 	$(".pass2_prompt").html("密码一致！");
 		 	$(".pass2_prompt").css("color","blue");
 		 }else{
@@ -124,18 +129,53 @@ define(["jquery", "cookie"], function($){
 		 });
 
 		 $(".register_submit").on("click",function(){
-		 	if(aa != null && bb != null && cc != null && bb === cc ){
+		 	if(username != null && password != null && password2 != null && password === password2 ){
 		 				alert("注册成功!")
-		 		    aa = $.cookie("user"),
-		 		    bb = $.cookie("pass"),
-		 		    cc = $.cookie("pass2");
-		 		    console.log(aa,bb,cc);
+		 		user_info = {
+		 		username : username,
+		 		password : password,
+		 		amount : 1
+		 	}
+
+		var coo =  $.cookie('users',user_info,{expires:100 , path:"/"});
 		 			}
+				
+
+
 		 	else{
-		 		alert("注册失败！")
+		 		alert("注册失败!")
 		 	} 	
 		 });
 		 
+		 $(".register_submit , .submit").on("click",function(e){
+		 	var event = event || window.event;
+		 		event.preventDefault();
+
+		 })
+
+		 	var tmp = $.cookie("user_info")
+		 	// console.log(tmp)
+		 $(".submit").on("click",function(){
+		 	// for(var  i in user_info){
+		 	// 	// username = user_info[i]
+		 	// }
+		 	// console.log(tmp)
+		 	var user = $(".number").val(),
+		 		pass = $(".password").val();
+		 	if(user == user_info.username && pass == user_info.password){
+		 		alert("成功登陆！");
+		 		$(".loginRegister").html(`
+			  		<a href="#">欢迎您：${user}</a>
+			  		<a href="#">退出</a>
+			  		`);
+		 		 $.cookie.json = true;
+		 	}else{
+		 		alert("登陆失败！")
+		 	}
+
+		 })
+
+
 
 
 

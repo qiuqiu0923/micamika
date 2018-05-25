@@ -37,6 +37,18 @@
                 "prod_name" : "小萌哒羊 Little Adorable Sheep",
                 "prod_info" : "一次性餐具（包含餐盘与叉子），此商品不单独出售，需与蛋糕一同配送。",
                 "prod_price": "$42.00"
+            },
+            {
+                "img":"/imgs/mock6.jpg",
+                "prod_name" : "小萌哒羊 Little Adorable Sheep",
+                "prod_info" : "一次性餐具（包含餐盘与叉子），此商品不单独出售，需与蛋糕一同配送。",
+                "prod_price": "$42.00"
+            },
+            {
+                "img":"/imgs/mock6.jpg",
+                "prod_name" : "小萌哒羊 Little Adorable Sheep",
+                "prod_info" : "一次性餐具（包含餐盘与叉子），此商品不单独出售，需与蛋糕一同配送。",
+                "prod_price": "$42.00"
             }
         ]
     }
